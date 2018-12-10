@@ -45,15 +45,15 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.get('439792255365021696').setName(`Total Users: ${member.guild.memberCount}`)
+    member.guild.channels.get('521752826653835274').setName(`Total Users: ${member.guild.memberCount}`)
     let humans = member.guild.members.filter(m => !m.user.bot).size;
-    member.guild.channels.get('439793088001736725').setName(`Member Count: ${humans}`)
+    member.guild.channels.get('521752826653835274').setName(`Member Count: ${humans}`)
     let bots = member.guild.members.filter(m => m.user.bot).size;
-    member.guild.channels.get('439793716052623361').setName(`Bot Count: ${bots}`)
+    member.guild.channels.get('521752826653835274').setName(`Bot Count: ${bots}`)
 });
 
 client.on('guildMemberAdd', member => {
-    const welcomechannel = member.guild.channels.find('name', 'tlbatadmin')
+    const welcomechannel = member.guild.channels.find('name', 'join-members')
 
     var newuserjoinembed = new Discord.RichEmbed()
       .setColor('00FF00')
@@ -65,7 +65,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', member => {
-    const goodbyechannel = member.guild.channels.find('name', 'tlbatadmin')
+    const goodbyechannel = member.guild.channels.find('name', 'join-members')
 
     var newuserjoinembed = new Discord.RichEmbed()
       .setColor('#FF0000')
