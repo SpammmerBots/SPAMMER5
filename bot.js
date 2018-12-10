@@ -42,206 +42,39 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 });
 
 
-client.on("ready", () => {
-let channel =     client.channels.get("502827265281884161")
-setInterval(function() {
-channel.send('♥♥♥الله اكبر');
-}, 25)
-})
 
-client.on("ready", () => {
-let channel =     client.channels.get("502827265281884161")
-setInterval(function() {
-channel.send('welcome welcome welcome wwelcome welcome welcome welcome welcome welcome');
-}, 25)
-})
 
-
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827265281884161")
-setInterval(function() {
-channel.send('spammer More in discord TOP TOP TOP credit 10k a 1day  5 acc Spammer MOre =50k Credit a 1 day :O');
-}, 25)
-})
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827265281884161")
-setInterval(function() {
-channel.send('بوت بوت سبام بوت بوت سبام هوب هوب هوب 10ك كرديت في اليوم اوميجد ');
-}, 25)
-})
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827265281884161")
-setInterval(function() {
-channel.send('Mahmoud-QuaStyle Top   Life Top ♥♥ ');
-}, 25)
-})
-
-
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827265281884161")
-setInterval(function() {
-channel.send('Spammer MOre hhhh :joy: :joy: ');
-}, 25)
-})
-
-
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827265281884161")
-setInterval(function() {
-channel.send('Number 1 Number 1 Spammer MOre hhhhhh QQ Baby hh Lol  ');
-}, 25)
-})
-
-
-////////////////////////////////////////////////New Channel 
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827266338979856")
-setInterval(function() {
-channel.send('WELCOME BACK TO SCHOOL SPAMMER OMG  ');
-}, 25)
-})
-
-
-
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827266338979856")
-setInterval(function() {
-channel.send('A4try BOTs spammer MOre yad al7a2el 3ard men Life aw Mahmoud top top top  ');
-}, 25)
-})
-
-
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827266338979856")
-setInterval(function() {
-channel.send('AL ONE YAD HHH AL ONE YAD DD  ');
-}, 25)
-})
-
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827266338979856")
-setInterval(function() {
-channel.send('Discord bot spammer more hh qq   ');
-}, 25)
-})
-
-
-
-
-
-///////////////////////////////////New Channel  
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827266363883531")
-setInterval(function() {
-channel.send(':up:  |  Spammer 2 has given @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼ a reputation point!  ');
-}, 25)
-})
-
- 
- 
-client.on("ready", () => {
-let channel =     client.channels.get("502827266363883531")
-setInterval(function() {
-channel.send(':up:  |  SpammerMore has given @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼ a reputation point! ');
-}, 25)
-})
-
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827266363883531")
-setInterval(function() {
-channel.send('Emoji Channel t7t da 3la tolll  ');
-}, 25)
-})
-
-
-
-
-////////////////////////////////New Channel Emoji Only 
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827267047555072")
-setInterval(function() {
-channel.send('♥♥♥♥♥♥♥♥  ');
-}, 25)
-})
-
-
-
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827267047555072")
-setInterval(function() {
-channel.send(':watch:  :100:  :weary:  :computer:  :ok_hand: ');
-}, 25)
-})
-
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827267047555072")
-setInterval(function() {
-channel.send(':flag_ac:  :flag_af:  :flag_ad:  :flag_eg:  :flag_iq:  :flag_kh:');
-}, 25)
-})
-
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827267047555072")
-setInterval(function() {
-channel.send(':eggplant: :trackball: :clock: :bike: :tangerine:');
-}, 25)
-})
-
-
-
-
-
-////////////////////New Channel Links Photo only
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827267232366594")
-setInterval(function() {
-channel.send(' https://cdn.pg.sa/ZzCBpPDFgM.png');
-}, 25)
-})
-
-
-client.on("ready", () => {
-let channel =     client.channels.get("502827267232366594")
-setInterval(function() {
-channel.send(' https://cdn.dribbble.com/users/196525/screenshots/2755421/levelup-dribbble.gif ');
-}, 25)
-})
-
-
-
-
-
+client.on('guildMemberAdd', member => {
+    member.guild.channels.get('439792255365021696').setName(`Total Users: ${member.guild.memberCount}`)
+    let humans = member.guild.members.filter(m => !m.user.bot).size;
+    member.guild.channels.get('439793088001736725').setName(`Member Count: ${humans}`)
+    let bots = member.guild.members.filter(m => m.user.bot).size;
+    member.guild.channels.get('439793716052623361').setName(`Bot Count: ${bots}`)
+});
+
+client.on('guildMemberAdd', member => {
+    const welcomechannel = member.guild.channels.find('name', 'tlbatadmin')
+
+    var newuserjoinembed = new Discord.RichEmbed()
+      .setColor('00FF00')
+      .setAuthor(member.user.tag + ' has joined server', member.user.displayAvatarURL)
+      .addField(`:inbox_tray: Welcome To The Server ${member.user.tag}`)
+      .setFooter(`User joined`)
+      .setTimestamp()
+      return welcomechannel.send(newuserjoinembed);
+});
+
+client.on('guildMemberRemove', member => {
+    const goodbyechannel = member.guild.channels.find('name', 'tlbatadmin')
+
+    var newuserjoinembed = new Discord.RichEmbed()
+      .setColor('#FF0000')
+      .setAuthor(member.user.tag + ' has left server', member.user.displayAvatarURL)
+      .addField(`:outbox_tray: Goodbye ${member.user.name} :disappointed_relieved: `)
+      .setFooter(`User left`)
+      .setTimestamp()
+      return goodbyechannel.send(newuserjoinembed);
+});
 
 
 
